@@ -27,20 +27,20 @@ int main()
 
 
 	dayType day;
-	day.setDay("Wed");
+	day.getDay();
 
-	day.print();
-	cout << endl;
-
-	cout << "Next Day: " << day.nextDay() << endl;
-
-	day.setDay("Sunday");
-	cout << "Set Day: ";
 	day.print();
 	cout << endl;
 
 	day.previousDay();
 	cout << "Previous Day: " << day.previousDay() << endl;
+
+	day.setDay("Wed");
+	cout << "Set Day: ";
+	day.print();
+	cout << endl;
+
+	cout << "Next Day: " << day.nextDay() << endl;
 
 	day.addDays(12);
 	cout << "Add days: ";
