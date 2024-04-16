@@ -2,49 +2,33 @@
 //
 
 #include <iostream>
-#include <string>
 #include "dayType.h"
+#include "dateType.h"
 
 using namespace std;
 
 int main()
 {
-	for (int i = 0; i < 7; i++)
-		cout << dayType::dayOfWeek[i] << " ";
-	cout << endl;
+    int num;
+    dateType date;
 
-	dayType::dayOfWeek[0] = "Sun";
-	dayType::dayOfWeek[1] = "Mon";
-	dayType::dayOfWeek[2] = "Tue";
-	dayType::dayOfWeek[3] = "Wed";
-	dayType::dayOfWeek[4] = "Thu";
-	dayType::dayOfWeek[5] = "Fri";
-	dayType::dayOfWeek[6] = "Sat";
+    date.setDate(4, 15, 2024);
+    cout << "Set Day: ";
+    date.print();
+    cout << endl;
 
-	for (int i = 0; i < 7; i++)
-		cout << dayType::dayOfWeek[i] << " ";
-	cout << endl;
+    cout << "Days gone in the year: " << date.numberOfDaysPassed();
+    cout << endl;
 
+    cout << "Days left in the Year: " << date.numberOfDaysLeft() << endl;
 
-	dayType day;
-	day.getDay();
+    cout << "Enter number of days to be added: ";
+    cin >> num;
+    cout << endl;
+    date.ADD_TO_DATE(num);
 
-	day.print();
-	cout << endl;
-
-	day.previousDay();
-	cout << "Previous Day: " << day.previousDay() << endl;
-
-	day.setDay("Wed");
-	cout << "Set Day: ";
-	day.print();
-	cout << endl;
-
-	cout << "Next Day: " << day.nextDay() << endl;
-
-	day.addDays(12);
-	cout << "Add days: ";
-	day.print();
-	cout << endl;
+    cout << "After increment date: ";
+    date.print();
+    cout << endl;
 
 }
