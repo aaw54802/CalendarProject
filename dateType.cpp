@@ -205,7 +205,6 @@ int dateType::numberOfDaysLeft()
 };
 
 
-//Wrong//
 void dateType::ADD_TO_DATE(int nDays)
 {
 	int day = getday() + nDays;
